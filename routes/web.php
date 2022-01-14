@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('index', function () {
+    return view('shop.index');
+});
+
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dashboard', function () {
         return view('dashboard');
