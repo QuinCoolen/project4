@@ -27,6 +27,10 @@ Route::get('index', function () {
     return view('shop.index');
 });
 
+Route::get('bestellen', function () {
+    return view('shop.bestellen');
+});
+
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dashboard', function () {
         return view('dashboard');
