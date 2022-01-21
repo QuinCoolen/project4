@@ -23,16 +23,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('overons', function () {
+    return view('shop.overons');
+});
+
+Route::get('menu', function () {
+    return view('shop.menu');
+});
+
 Route::get('index', function () {
     return view('shop.index');
 });
 
 Route::get('bestellen', function () {
     return view('shop.bestellen');
-});
-
-Route::get('overons', function () {
-    return view('shop.overons');
 });
 
 Route::group(['middleware'=>'auth'], function(){
