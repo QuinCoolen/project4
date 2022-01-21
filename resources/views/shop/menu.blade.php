@@ -18,40 +18,13 @@
         </div>
         <div class="flex-auto bg-[url('images/background.jpg')] bg-cover">
             <div class="mt-52 mb-20 mx-20 grid grid-cols-3 gap-4 content-center">
+                @foreach ($pizzas as $pizza)
                 <div class="h-fit flex flex-col text-center items-center border-2 border-white rounded-md bg-gray-800 text-white gap-2 py-4">
-                    <img src="{{asset('images/pizza_margherita.png')}}" alt="pizza margherita" class="h-44" >
-                    <p class="text-sm font-semibold">Pizza Margehrita</p>
-                    <p class="text-sm font-semibold">Ingredients: Kaas, Tomatensaus, Salami</p>
-                    <p class="text-sm font-semibold">Prijs: €10,00</p>
+                    <img src="{{asset($pizza->image)}}" alt="{{$pizza->name}}" class="h-44" >
+                    <p class="text-sm font-semibold">{{$pizza->name}}</p>
+                    <p class="text-sm font-semibold">{{$pizza->priceForDisplay()}}</p>
                 </div>
-
-                <div class="h-fit flex flex-col text-center items-center border-2 border-white rounded-md bg-gray-800 text-white gap-2 py-4">
-                    <img src="{{asset('images/pizza_margherita.png')}}" alt="pizza margherita" class="h-44" >
-                    <p class="text-sm font-semibold">Pizza Margehrita</p>
-                    <p class="text-sm font-semibold">Ingredients: Kaas, Tomatensaus, Salami</p>
-                    <p class="text-sm font-semibold">Prijs: €10,00</p>
-                </div>
-
-                <div class="h-fit flex flex-col text-center items-center border-2 border-white rounded-md bg-gray-800 text-white gap-2 py-4">
-                    <img src="{{asset('images/pizza_margherita.png')}}" alt="pizza margherita" class="h-44" >
-                    <p class="text-sm font-semibold">Pizza Margehrita</p>
-                    <p class="text-sm font-semibold">Ingredients: Kaas, Tomatensaus, Salami</p>
-                    <p class="text-sm font-semibold">Prijs: €10,00</p>
-                </div>
-
-                <div class="h-fit flex flex-col text-center items-center border-2 border-white rounded-md bg-gray-800 text-white gap-2 py-4">
-                    <img src="{{asset('images/pizza_margherita.png')}}" alt="pizza margherita" class="h-44" >
-                    <p class="text-sm font-semibold">Pizza Margehrita</p>
-                    <p class="text-sm font-semibold">Ingredients: Kaas, Tomatensaus, Salami</p>
-                    <p class="text-sm font-semibold">Prijs: €10,00</p>
-                </div>
-
-                <div class="h-fit flex flex-col text-center items-center border-2 border-white rounded-md bg-gray-800 text-white gap-2 py-4">
-                    <img src="{{asset('images/pizza_margherita.png')}}" alt="pizza margherita" class="h-44" >
-                    <p class="text-sm font-semibold">Pizza Margehrita</p>
-                    <p class="text-sm font-semibold">Ingredients: Kaas, Tomatensaus, Salami</p>
-                    <p class="text-sm font-semibold">Prijs: €10,00</p>
-                </div>
+                @endforeach
             </div>
         </div>
         <footer class="py-8 h-16 text-white bg-gray-800 flex flex-row items-center justify-around">

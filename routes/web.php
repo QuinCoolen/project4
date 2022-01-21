@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PizzaController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -27,10 +28,6 @@ Route::get('overons', function () {
     return view('shop.overons');
 });
 
-Route::get('menu', function () {
-    return view('shop.menu');
-});
-
 Route::get('index', function () {
     return view('shop.index');
 });
@@ -38,6 +35,8 @@ Route::get('index', function () {
 Route::get('bestellen', function () {
     return view('shop.bestellen');
 });
+
+Route::get('menu', [PizzaController::class, 'index'])->name('shop.menu');
 
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dashboard', function () {
