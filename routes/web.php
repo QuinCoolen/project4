@@ -31,6 +31,10 @@ Route::get('bestellen', function () {
     return view('shop.bestellen');
 });
 
+Route::get('overons', function () {
+    return view('shop.overons');
+});
+
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dashboard', function () {
         return view('dashboard');
