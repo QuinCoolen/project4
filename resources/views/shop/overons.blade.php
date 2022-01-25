@@ -11,7 +11,7 @@
      <div class="flex flex-col h-screen">
         <div class="absolute w-full font-sans font-bold tracking-widest bg-gray-800 flex md:flex-row flex-col items-center justify-around transition-all ease-in-out h-16 text-transparent transform hover:h-40 hover:text-white duration-500">
             <a href="overons">OVER ONS</a>
-            <a href="menu">MENU</a>
+            <a href="login">LOGIN</a>
             <img src="{{asset('images/stonks.png')}}" alt="stonks pizza logo" class="h-full">
             <a href="bestellen">BESTELLEN</a>
             <a href="">WINKELMANDJE</a>

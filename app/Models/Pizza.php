@@ -23,30 +23,23 @@ class Pizza extends Model
      */
     protected $guarded = ['*', 'id'];
 
-    public function priceForDisplay2()
-    {
-        $priceAsString = "€" . str_replace('.', ',', $this->prijs);
-
-        $priceSeparated = explode(',', $priceAsString);
-
-        if(count($priceAsString) >= 1) {
-            if(strlen($priceSeparated[1]) == 1) {
-                return $priceAsString + "0";
-            }
-            return $priceAsString;
-        }
-        else
-        {
-            return $priceAsString + ",00";
-        }
-        
-    }
-
+    
     public function priceForDisplay()
     {
         $price = $this->prijs * 100;
 
         return "€" . substr($price, 0, -2) . "," . substr($price, -2);
+    }
+    
+    public function AddToCart()
+    {
+        $pizza = Pizza::all();
+        $cart = array();
+
+        foreach($pizza as $cart){
+            echo $cart->name;
+            echo $cart->prijs;
+        }
     }
 
 }

@@ -13,9 +13,8 @@ class PizzaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        
-        return view("shop.menu", ['pizzas' => Pizza::all()]);
+    {        
+        return view("shop.bestellen", ['pizzas' => Pizza::all()]);
     }
 
     /**

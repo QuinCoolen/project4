@@ -32,11 +32,7 @@ Route::get('index', function () {
     return view('shop.index');
 });
 
-Route::get('bestellen', function () {
-    return view('shop.bestellen');
-});
-
-Route::get('menu', [PizzaController::class, 'index'])->name('shop.menu');
+Route::get('bestellen', [PizzaController::class, 'index'])->name('shop.bestellen');
 
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dashboard', function () {
