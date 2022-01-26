@@ -29,33 +29,11 @@
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>
                     </select>
+                    @if (Auth::check())                        
                     <button class="w-24 bg-amber-600 hover:bg-amber-800 px-5 py-2 text-sm leading-5 rounded-full font-semibold text-white">Bestellen</button>
+                    @endif
                 </div>
                 @endforeach
-
-                <div class="h-fit flex flex-col text-center items-center border-2 border-white rounded-md bg-gray-800 text-white gap-2 py-4">
-                    <img src="{{asset('images/pizza_margherita.png')}}" alt="pizza margherita" class="h-44" >
-                    <p class="text-sm font-semibold">Pizza Margehrita</p>
-                    <p class="text-sm font-semibold">Ingredients: Kaas, Tomatensaus, Salami</p>
-                    <p class="text-sm font-semibold">Prijs: €10,00</p>
-                    <button class="w-24 bg-amber-600 hover:bg-amber-800 px-5 py-2 text-sm leading-5 rounded-full font-semibold text-white">Bestellen</button>
-                </div>
-
-                <div class="h-fit flex flex-col text-center items-center border-2 border-white rounded-md bg-gray-800 text-white gap-2 py-4">
-                    <img src="{{asset('images/pizza_margherita.png')}}" alt="pizza margherita" class="h-44" >
-                    <p class="text-sm font-semibold">Pizza Margehrita</p>
-                    <p class="text-sm font-semibold">Ingredients: Kaas, Tomatensaus, Salami</p>
-                    <p class="text-sm font-semibold">Prijs: €10,00</p>
-                    <button class="w-24 bg-amber-600 hover:bg-amber-800 px-5 py-2 text-sm leading-5 rounded-full font-semibold text-white">Bestellen</button>
-                </div>
-
-                <div class="h-fit flex flex-col text-center items-center border-2 border-white rounded-md bg-gray-800 text-white gap-2 py-4">
-                    <img src="{{asset('images/pizza_margherita.png')}}" alt="pizza margherita" class="h-44" >
-                    <p class="text-sm font-semibold">Pizza Margehrita</p>
-                    <p class="text-sm font-semibold">Ingredients: Kaas, Tomatensaus, Salami</p>
-                    <p class="text-sm font-semibold">Prijs: €10,00</p>
-                    <button class="w-24 bg-amber-600 hover:bg-amber-800 px-5 py-2 text-sm leading-5 rounded-full font-semibold text-white">Bestellen</button>
-                </div>
             </div>
         </div>
         <footer class="py-8 h-16 text-white bg-gray-800 flex flex-row items-center justify-around">
