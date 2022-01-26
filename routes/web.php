@@ -32,6 +32,10 @@ Route::get('index', function () {
     return view('shop.index');
 });
 
+Route::get('winkelmandje', function () {
+    return view('shop.winkelmandje');
+});
+
 Route::get('bestellen', [PizzaController::class, 'index'])->name('shop.bestellen');
 
 Route::group(['middleware'=>'auth'], function(){

@@ -14,7 +14,7 @@
             <a href="login">LOGIN</a>
             <img src="{{asset('images/stonks.png')}}" alt="stonks pizza logo" class="h-full">
             <a href="bestellen">BESTELLEN</a>
-            <a href="">WINKELMANDJE</a>
+            <a href="winkelmandje">WINKELMANDJE</a>
         </div>
         <div class="flex-auto bg-[url('images/background.jpg')] bg-cover"></div>
         <footer class="md:h-16 h-32 text-white bg-gray-800 flex md:flex-row items-center justify-around flex-col">
