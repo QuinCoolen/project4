@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class Winkelmandje extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function winkelmandje()
+    public function customer()
     {
-        return $this->hasOne(Winkelmandje::class);
+        return $this->belongsTo(Customer::class);
     }
 }
