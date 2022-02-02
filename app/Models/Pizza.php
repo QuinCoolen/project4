@@ -30,16 +30,4 @@ class Pizza extends Model
 
         return "€" . substr($price, 0, -2) . "," . substr($price, -2);
     }
-    
-    public function AddToCart()
-    {
-        $pizza = Pizza::all();
-        $cart = array();
-
-        foreach($pizza as $cart){
-            echo $cart->name;
-            echo $cart->prijs;
-        }
-    }
-
 }

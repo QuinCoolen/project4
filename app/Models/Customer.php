@@ -11,8 +11,4 @@ class Customer extends Model
 
     protected $guarded = [];
 
-    public function winkelmandje()
-    {
-        return $this->hasOne(Winkelmandje::class);
-    }
 }
