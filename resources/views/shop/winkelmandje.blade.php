@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .border-spacing {
-                border-spacing: 20px;
-            }
-        }
-    </style>
     <title>Stonks Pizza</title>
 </head>
 <body>
@@ -32,12 +25,14 @@
                         <th>Verwijderen</th>
                         <th>Prijs</th>
                     </tr>
+                    @foreach ($order->pizzas as $pizza)
                     <tr>
-                        <td class="py-5">Pizza Magherita</td>
+                        <td class="py-5">{{$pizza->name}}</td>
                         <td>Large</td>
                         <td><button class="w-28 bg-red-600 hover:bg-red-800 py-2 text-sm leading-5 rounded-full font-semibold text-white">Verwijderen</button></td>
-                        <td>€12,50</td>
-                    </tr>
+                        <td>{{$pizza->priceForDisplay()}}</td>
+                    </tr>                   
+                    @endforeach
                     <tr>
                         <td class="py-5">Pizza Magherita</td>
                         <td>Large</td>

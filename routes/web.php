@@ -6,6 +6,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\OrderController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -32,11 +33,9 @@ Route::get('index', function () {
     return view('shop.index');
 });
 
-Route::get('winkelmandje', function () {
-    return view('shop.winkelmandje');
-});
-
 Route::get('bestellen', [PizzaController::class, 'index'])->name('shop.bestellen');
+
+Route::get('winkelmandje/{id}', [OrderController::class, 'show'])->name('shop.winkelmandje');
 
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dashboard', function () {

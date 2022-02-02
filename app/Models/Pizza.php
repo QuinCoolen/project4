@@ -30,4 +30,8 @@ class Pizza extends Model
 
         return "€" . substr($price, 0, -2) . "," . substr($price, -2);
     }
+
+    public function order(){
+        return $this->belongsToMany(Order::class);
+    }
 }
