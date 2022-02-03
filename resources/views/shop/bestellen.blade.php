@@ -14,7 +14,7 @@
             <a href="login">LOGIN</a>
             <img src="{{asset('images/stonks.png')}}" alt="stonks pizza logo" class="h-full">
             <a href="bestellen">BESTELLEN</a>
-            <a href="winkelmandje">WINKELMANDJE</a>
+            <a href="/winkelmandje">WINKELMANDJE</a>
         </div>
         <div class="flex-auto bg-[url('images/background.jpg')] bg-cover">
             <div class="mt-52 mb-20 mx-20 grid grid-cols-3 gap-4 content-center">
@@ -29,8 +29,13 @@
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>
                     </select>
-                    @if (Auth::check())                        
-                    <button class="w-24 bg-amber-600 hover:bg-amber-800 px-5 py-2 text-sm leading-5 rounded-full font-semibold text-white">Bestellen</button>
+                    @if (Auth::check())      
+                    <form action="{{ route('pizzaorder.store', [$order_id = 1]) }}" method="POST">                    
+                        @csrf
+                        @method('PATCH')
+                        <input type="hidden" name="pizza_id" value="{{$pizza->id}}" />
+                        <button class="w-24 bg-amber-600 hover:bg-amber-800 px-5 py-2 text-sm leading-5 rounded-full font-semibold text-white">Bestellen</button>
+                    </form>
                     @endif
                 </div>
                 @endforeach

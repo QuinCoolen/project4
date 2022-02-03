@@ -17,7 +17,7 @@ class PizzaOrderController extends Controller
     {
         $order = Order::find($order_id);
         $order->pizzas()->attach($request->input('pizza_id'));
-        return redirect()->route('shop.index');
+        return redirect('index');
     }
 
     /**
@@ -30,6 +30,6 @@ class PizzaOrderController extends Controller
     {
         $order = Order::find($order_id);
         $order->pizzas()->detach($pizza_id);
-        return redirect()->route('shop.bestellen');
+        return redirect('index');
     }
 }

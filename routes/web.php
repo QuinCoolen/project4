@@ -34,14 +34,12 @@ Route::get('index', function () {
     return view('shop.index');
 });
 
-Route::get('bestellen', [PizzaController::class, 'index'])->name('shop.bestellen');
+Route::get('/bestellen', [PizzaController::class, 'index'])->name('shop.bestellen');
 
-Route::get('winkelmandje/{id}', [OrderController::class, 'show'])->name('shop.winkelmandje');
+Route::get('/winkelmandje/{id}', [OrderController::class, 'show'])->name('shop.winkelmandje')->middleware('auth');
 
-
-
-Route::patch('/bestellen/{pizza_id}/pizzas', [PizzaOrderController::class, 'store'])->name('pizzaorder.store');
-Route::delete('/winkelmandje/{order_id}/pizzas/{pizza_id}', [PizzaOrderController::class, 'destroy'])->name('pizzaorder.destroy');
+Route::patch('/bestellen/{order_id}/pizzas', [PizzaOrderController::class, 'store'])->name('pizzaorder.store')->middleware('auth');
+Route::delete('/winkelmandje/{order_id}/pizzas/{pizza_id}', [PizzaOrderController::class, 'destroy'])->name('pizzaorder.destroy')->middleware('auth');
 
 
 Route::group(['middleware'=>'auth'], function(){

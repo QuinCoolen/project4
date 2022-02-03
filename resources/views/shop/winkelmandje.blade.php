@@ -10,13 +10,13 @@
 <body>
      <div class="flex flex-col h-screen">
         <div class="absolute w-full font-sans font-bold tracking-widest bg-gray-800 flex flex-row items-center justify-around transition-all ease-in-out h-16  text-transparent transform hover:h-40 hover:text-white duration-500">
-            <a href="overons">OVER ONS</a>
-            <a href="login">LOGIN</a>
+            <a href="/overons">OVER ONS</a>
+            <a href="/login">LOGIN</a>
             <img src="{{asset('images/stonks.png')}}" alt="stonks pizza logo" class="h-full">
-            <a href="bestellen">BESTELLEN</a>
-            <a href="winkelmandje">WINKELMANDJE</a>
+            <a href="/bestellen">BESTELLEN</a>
+            <a href="/winkelmandje/{{$order->id}}">WINKELMANDJE</a>
         </div>
-        <div class="flex-auto bg-[url('images/background.jpg')] bg-cover">
+        <div class="flex-auto bg-[url('/images/background.jpg')] bg-cover">
             <div class="mt-52 mb-20 mx-20">
                 <table class="text-center border-seperate border-spacing w-full border-2 border-white bg-gray-800 text-white">
                     <tr>
