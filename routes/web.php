@@ -7,6 +7,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PizzaOrderController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,12 @@ Route::get('index', function () {
 Route::get('bestellen', [PizzaController::class, 'index'])->name('shop.bestellen');
 
 Route::get('winkelmandje/{id}', [OrderController::class, 'show'])->name('shop.winkelmandje');
+
+
+
+Route::patch('/bestellen/{pizza_id}/pizzas', [PizzaOrderController::class, 'store'])->name('pizzaorder.store');
+Route::delete('/winkelmandje/{order_id}/pizzas/{pizza_id}', [PizzaOrderController::class, 'destroy'])->name('pizzaorder.destroy');
+
 
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dashboard', function () {

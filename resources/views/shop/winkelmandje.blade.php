@@ -29,7 +29,13 @@
                     <tr>
                         <td class="py-5">{{$pizza->name}}</td>
                         <td>Large</td>
-                        <td><button class="w-28 bg-red-600 hover:bg-red-800 py-2 text-sm leading-5 rounded-full font-semibold text-white">Verwijderen</button></td>
+                        <td>
+                            <form action="{{ route('pizzaorder.destroy', [$order_id = 1, $pizza_id = $pizza->id]) }}" method="POST">                    
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="w-28 bg-red-600 hover:bg-red-800 py-2 text-sm leading-5 rounded-full font-semibold text-white">Verwijderen</button>
+                            </form>
+                        </td>
                         <td>{{$pizza->priceForDisplay()}}</td>
                     </tr>                   
                     @endforeach

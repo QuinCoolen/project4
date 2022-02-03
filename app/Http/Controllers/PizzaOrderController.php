@@ -16,7 +16,7 @@ class PizzaOrderController extends Controller
     public function store(Request $request, $order_id)
     {
         $order = Order::find($order_id);
-        $order->album()->attach($request->input('pizza_id'));
+        $order->pizzas()->attach($request->input('pizza_id'));
         return redirect()->route('shop.index');
     }
 
@@ -29,7 +29,7 @@ class PizzaOrderController extends Controller
     public function destroy($order_id, $pizza_id)
     {
         $order = Order::find($order_id);
-        $order->album()->detach($pizza_id);
-        return redirect()->route('shop.index');
+        $order->pizzas()->detach($pizza_id);
+        return redirect()->route('shop.bestellen');
     }
 }
