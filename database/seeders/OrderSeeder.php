@@ -14,7 +14,7 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('order')->insert([
+        DB::table('orders')->insert([
             'customer_id' => '1',
             'status' => 'pizzas voorbereiden',
             'totalprice' => '39.50',

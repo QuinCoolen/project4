@@ -33,18 +33,6 @@
                         <td>{{$pizza->priceForDisplay()}}</td>
                     </tr>                   
                     @endforeach
-                    <tr>
-                        <td class="py-5">Pizza Magherita</td>
-                        <td>Large</td>
-                        <td><button class="w-28 bg-red-600 hover:bg-red-800 py-2 text-sm leading-5 rounded-full font-semibold text-white">Verwijderen</button></td>
-                        <td>€12,50</td>
-                    </tr>
-                    <tr>
-                        <td class="py-5">Pizza Magherita</td>
-                        <td>Large</td>
-                        <td><button class="w-28 bg-red-600 hover:bg-red-800 py-2 text-sm leading-5 rounded-full font-semibold text-white">Verwijderen</button></td>
-                        <td>€12,50</td>
-                    </tr>
                 </table>
             </div>
         </div>
