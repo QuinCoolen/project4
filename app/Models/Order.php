@@ -24,6 +24,6 @@ class Order extends Model
     protected $guarded = ['*', 'id'];
 
     public function pizzas(){
-        return $this->belongsToMany(Pizza::class);
+        return $this->belongsToMany(Pizza::class)->withPivot('size');
     }
 }

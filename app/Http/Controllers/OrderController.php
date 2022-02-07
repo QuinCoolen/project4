@@ -47,7 +47,7 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        return view("shop.winkelmandje", ['order' => Order::find($id), 'size' => Order::find($id)->pizzas()->value('size')]);
+        return view("shop.winkelmandje", ['order' => Order::find($id)]);
     }
 
     /**

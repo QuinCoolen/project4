@@ -25,7 +25,7 @@
                     <p>Ingredients: Kaas, Tomatensaus</p>
                     <p>{{$pizza->priceForDisplay()}}</p>
                     @if (Auth::check())      
-                    <form action="{{ route('pizzaorder.store', [$order_id = 1]) }}" method="POST">                    
+                    <form class="flex flex-col items-center gap-2" action="{{ route('pizzaorder.store', [$order_id = 1]) }}" method="POST">                    
                         @csrf
                         @method('PATCH')
                         <input type="hidden" name="pizza_id" value="{{$pizza->id}}" />
