@@ -37,8 +37,21 @@
                             </form>
                         </td>
                         <td>{{$pizza->priceForDisplay()}}</td>
-                    </tr>                   
+                    </tr>
                     @endforeach
+                    <tr>
+                        <td></td>
+                        <td class="capitalize">Status: {{$order->status}}</td>
+                        <td>Totaal Prijs: {{$pizza->priceForDisplay()}}</td>
+                        <td>
+                            <form action="{{ route('order.update', ['id' => $order->id]) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <input type="hidden" name="status" value="bestelling geplaatst">
+                                <button type="submit" class="w-28 bg-amber-600 hover:bg-amber-800 py-2 text-sm leading-5 rounded-full font-semibold text-white">Bestellen</button>
+                            </form>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

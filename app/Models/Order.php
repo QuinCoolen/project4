@@ -14,14 +14,7 @@ class Order extends Model
     *
     * @var string[]
     */
-    protected $fillable = [];
-
-    /**
-        * The attributes that aren't mass assignable.
-        *
-        * @var string[]|bool
-        */
-    protected $guarded = ['*', 'id'];
+    protected $fillable = ['status'];
 
     public function pizzas(){
         return $this->belongsToMany(Pizza::class)->withPivot('size');

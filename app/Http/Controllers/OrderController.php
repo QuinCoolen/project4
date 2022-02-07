@@ -70,7 +70,11 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'status' => 'required|max:191',
+        ]);
+        Order::find($id)->update($request->except(['id', '_token']));
+        return redirect('winkelmandje/1');
     }
 
     /**

@@ -36,6 +36,7 @@ Route::get('index', function () {
 
 Route::get('/bestellen', [PizzaController::class, 'index'])->name('shop.bestellen');
 
+Route::put('/winkelmandje/{id}', [OrderController::class, 'update'])->name('order.update')->middleware('auth');
 Route::get('/winkelmandje/{id}', [OrderController::class, 'show'])->name('shop.winkelmandje')->middleware('auth');
 
 Route::patch('/bestellen/{order_id}/pizzas', [PizzaOrderController::class, 'store'])->name('pizzaorder.store')->middleware('auth');
