@@ -14,9 +14,21 @@
             <a href="login">LOGIN</a>
             <img src="{{asset('images/stonks.png')}}" alt="stonks pizza logo" class="h-full">
             <a href="bestellen">BESTELLEN</a>
-            <a href="winkelmandje">WINKELMANDJE</a>
+            <a href="winkelmandje/1">WINKELMANDJE</a>
         </div>
-        <div class="flex-auto bg-[url('images/background.jpg')] bg-cover"></div>
+        <div class="flex-auto bg-[url('images/background.jpg')] bg-cover">
+            <div class="mt-52 mb-20 mx-20 gap-4">
+                <div class="h-full border-2 border-white rounded-md bg-gray-800 text-white gap-2 p-4 flex flex-col items-center">
+                    <h1 class="text-xl">Stonks Pizza</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus minima quas nemo consectetur officiis. Impedit ab, exercitationem architecto, repudiandae perferendis facere accusamus voluptatem vero mollitia eligendi provident placeat, quibusdam fuga. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus reiciendis ex dolorem animi. Aliquam vero doloribus in officiis, autem, neque ducimus dolore dolorum odio similique eum expedita culpa totam possimus.</p>
+                    <div class="w-full flex justify-around">
+                        <button class="w-24 hover:bg-white hover:text-black border-2 border-white py-2 leading-5 rounded-full font-semibold text-white" onclick="window.location.href = '/overons';">Over Ons</button>
+                        <button class="w-24 hover:bg-white hover:text-black border-2 border-white py-2 leading-5 rounded-full font-semibold text-white" onclick="window.location.href = '/bestellen';">Bestellen</button>
+                        <button class="w-24 hover:bg-white hover:text-black border-2 border-white py-2 leading-5 rounded-full font-semibold text-white" onclick="window.location.href = '/login';">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer class="md:h-16 h-32 text-white bg-gray-800 flex md:flex-row items-center justify-around flex-col">
             <p>Algemene Voorwaarden</p>
             <p>KVK: 3904121</p>

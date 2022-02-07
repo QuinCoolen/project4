@@ -28,7 +28,7 @@
                     @foreach ($order->pizzas as $pizza)
                     <tr>
                         <td class="py-5">{{$pizza->name}}</td>
-                        <td>Large</td>
+                        <td class="capitalize">{{$size}}</td>
                         <td>
                             <form action="{{ route('pizzaorder.destroy', [$order_id = 1, $pizza_id = $pizza->id]) }}" method="POST">                    
                                 @csrf

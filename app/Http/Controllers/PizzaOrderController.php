@@ -16,8 +16,8 @@ class PizzaOrderController extends Controller
     public function store(Request $request, $order_id)
     {
         $order = Order::find($order_id);
-        $order->pizzas()->attach($request->input('pizza_id'));
-        return redirect('index');
+        $order->pizzas()->attach($request->input('pizza_id'), ['size' => $request->input('pizza-size')]);
+        return redirect('winkelmandje/1');
     }
 
     /**
@@ -30,6 +30,6 @@ class PizzaOrderController extends Controller
     {
         $order = Order::find($order_id);
         $order->pizzas()->detach($pizza_id);
-        return redirect('index');
+        return redirect('winkelmandje/1');
     }
 }

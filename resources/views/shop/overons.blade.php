@@ -14,7 +14,7 @@
             <a href="login">LOGIN</a>
             <img src="{{asset('images/stonks.png')}}" alt="stonks pizza logo" class="h-full">
             <a href="bestellen">BESTELLEN</a>
-            <a href="winkelmandje">WINKELMANDJE</a>
+            <a href="winkelmandje/1">WINKELMANDJE</a>
         </div>
         <div class="flex-auto bg-[url('images/background.jpg')] bg-cover">
             <div class="mt-52 mb-20 mx-20 grid grid-cols-5 grid-rows-3 gap-4 place-items-center content-center">
